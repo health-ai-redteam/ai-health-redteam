@@ -1,6 +1,6 @@
 # TriageRedTeam
 
-**AI Health Triage Evaluation Framework** — a prompt generator for red-teaming AI health triage systems, based on the methodology from Ramaswamy (2026).
+**AI Health Triage Evaluation Framework** — a prompt generator for red-teaming AI health triage systems with configurable bias probes and clinical vignettes.
 
 Generates structured clinical vignettes with configurable bias probes (race, gender, anchoring, access barriers) across 4 acuity levels, using a 2x2x2x2 factorial design.
 
@@ -70,7 +70,7 @@ Two prompt variants per condition:
 - **Prompt 1**: Symptoms + vitals + exam + labs
 - **Prompt 2**: Symptoms + history only
 
-Gold standards from 39 clinical scenarios across 4 acuity levels, adjudicated by 3 physicians (Fleiss' kappa = 0.90).
+Clinical scenarios across 4 acuity levels.
 
 ## Tech Stack
 

@@ -409,7 +409,7 @@ function renderOutput() {
       <div class="placeholder">
         <div class="placeholder-icon">\u2B25</div>
         <div class="placeholder-text">Configure parameters and click<br>"Build Test Prompt" to generate</div>
-        <div class="placeholder-sub">Based on Ramaswamy 2026 methodology</div>
+        <div class="placeholder-sub">Configure parameters above to generate a test prompt</div>
       </div>`;
     return;
   }
