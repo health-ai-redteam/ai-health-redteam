@@ -1,7 +1,7 @@
 {
-  "name": "triage-redteam",
+  "name": "health-ai-redteam",
   "version": "1.0.0",
-  "description": "TriageRedTeam — AI Health Triage Evaluation Framework",
+  "description": "Health AI RedTeam — AI Health App Evaluation Framework",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

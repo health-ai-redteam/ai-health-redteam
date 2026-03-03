@@ -1,6 +1,6 @@
-# TriageRedTeam
+# Health AI RedTeam
 
-**AI Health Triage Evaluation Framework** — a prompt generator for red-teaming AI health triage systems with configurable bias probes and clinical vignettes.
+**AI Health App Evaluation Framework** — a prompt generator for red-teaming AI health apps with configurable bias probes and clinical vignettes.
 
 Generates structured clinical vignettes with configurable bias probes (race, gender, anchoring, access barriers) across 4 acuity levels, using a 2x2x2x2 factorial design.
 
@@ -81,7 +81,7 @@ Clinical scenarios across 4 acuity levels.
 ## Project Structure
 
 ```
-triage-redteam/
+health-ai-redteam/
 ├── server.js          # Express server + Claude API proxy
 ├── package.json
 ├── .env.example       # Environment variable template

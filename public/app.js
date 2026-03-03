@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   TriageRedTeam — App Logic (vanilla JS, no frameworks)
+   Health AI RedTeam — App Logic (vanilla JS, no frameworks)
    ═══════════════════════════════════════════════════════════════ */
 
 // ── Constants ────────────────────────────────────────────────
