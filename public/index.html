@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TriageRedTeam — AI Health Triage Evaluation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="logo-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-title">TriageRedTeam</div>
+          <div class="logo-subtitle">AI Health Triage Evaluation Framework</div>
+        </div>
+      </div>
+      <div class="header-right">
+        Based on Ramaswamy (2026)<br>
+        2&times;2&times;2&times;2 factorial design &middot; 39 scenarios &middot; 4 acuity levels
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <main class="main-grid">
+
+    <!-- ═══ LEFT COLUMN ═══ -->
+    <div class="left-col">
+
+      <!-- API Key -->
+      <div class="section" style="padding:14px 20px">
+        <div id="api-key-area"></div>
+      </div>
+
+      <!-- Target Acuity Level -->
+      <div class="section">
+        <div class="section-head">
+          <span class="section-title">Target Acuity Level</span>
+          <span class="badge">GOLD STANDARD</span>
+        </div>
+        <div id="triage-grid" class="triage-grid"></div>
+        <div id="triage-indicator"></div>
+      </div>
+
+      <!-- Clinical Scenario -->
+      <div class="section">
+        <div class="section-head">
+          <span class="section-title">Clinical Scenario</span>
+          <span class="badge" id="variant-badge">PROMPT VARIANT 1</span>
+        </div>
+
+        <div id="objective-toggle-area"></div>
+
+        <div class="field-label" style="margin-bottom:8px">
+          SCENARIO LIBRARY &middot; LEVEL <span id="scenario-level-text">D</span>
+        </div>
+        <div id="scenario-list"></div>
+
+        <button id="ai-generate-btn" class="ai-gen-btn">
+          &#10022; AI-Generate Vignette for Level <span id="ai-gen-level">D</span>
+        </button>
+        <div id="ai-error" class="ai-error"></div>
+
+        <div id="custom-fields"></div>
+      </div>
+
+      <!-- Patient Demographics -->
+      <div class="section">
+        <div class="section-head">
+          <span class="section-title">Patient Demographics</span>
+          <span class="badge">FACTORIAL</span>
+        </div>
+        <div class="demo-grid">
+          <div>
+            <div class="field-label">AGE</div>
+            <input type="number" id="age-input" class="field-input" value="34" min="18" max="90">
+          </div>
+          <div>
+            <div class="field-label">GENDER</div>
+            <div id="gender-pills"></div>
+          </div>
+        </div>
+        <div style="margin-top:14px">
+          <div class="field-label">RACE (explicit in prompt)</div>
+          <div id="race-pills"></div>
+        </div>
+      </div>
+
+      <!-- Factorial Conditions -->
+      <div class="section">
+        <div class="section-head">
+          <span class="section-title">Factorial Conditions</span>
+          <span class="badge">BIAS PROBES</span>
+        </div>
+        <div id="anchoring-area"></div>
+        <div class="section-divider"></div>
+        <div id="barrier-area"></div>
+      </div>
+    </div>
+
+    <!-- ═══ RIGHT COLUMN ═══ -->
+    <div class="right-col">
+      <div id="variant-display" class="variant-display"></div>
+      <div id="scenario-preview"></div>
+
+      <button id="build-btn" class="build-btn">&#11045; Build Test Prompt</button>
+
+      <div id="output-area"></div>
+
+      <div class="study-ref">
+        <strong style="color:#1e3a5f">Study methodology:</strong>
+        2&times;2&times;2&times;2 factorial design &middot; Race (White/Black) &times; Gender (Man/Woman)
+        &times; Anchoring (&plusmn;) &times; Access Barrier (&plusmn;) = 16 conditions per vignette.
+        Two prompt variants: with and without objective clinical data.
+        Gold standards from 39 clinical scenarios across 4 acuity levels
+        adjudicated by 3 physicians (Fleiss' &kappa;&nbsp;=&nbsp;0.90).
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
